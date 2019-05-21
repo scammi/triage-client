@@ -2,35 +2,36 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bootstrap Data Table with Filter Row Feature</title>
+<title>Patient Manager</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 <link rel="stylesheet" href="./src/css/index.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
 <body>
     <div class="table-wrapper">
         <div class="table-title">
             <div class="row">
-                <div class="col-sm-6"><h2>Manage <b>Domains</b></h2></div>
+                <div class="col-sm-6"><h2>Manage <b>Patients</b></h2></div>
                 <div class="col-sm-6">
-                    <div class="btn-group" data-toggle="buttons">
-                        <label class="btn btn-info active">
+                    <div class="btn-group" role="group" >
+                        <button type="button" class="btn btn-primary">
                             <input type="radio" name="status" value="all" checked="checked"> All
-                        </label>
-                        <label class="btn btn-success">
-                            <input type="radio" name="status" value="active"> Active
-                        </label>
-                        <label class="btn btn-warning">
-                            <input type="radio" name="status" value="inactive"> Inactive
-                        </label>
-                        <label class="btn btn-danger">
-                            <input type="radio" name="status" value="expired"> Expired
-                        </label>
+                        </button>
+                        <button type="button" class="btn btn-success">
+                            <input type="radio" name="status" value="active"> Wait
+                        </button>
+                        <button type="button" class="btn btn-warning">
+                            <input type="radio" name="status" value="inactive"> Observation
+                        </button>
+                        <button type="button" class="btn btn-danger">
+                            <input type="radio" name="status" value="expired"> Immediate
+                        </button>
+                        <button type="button" class="btn btn-dark">
+                            <input type="radio" name="status" value="expired"> Expectant
+                        </button>
                     </div>
                 </div>
             </div>
@@ -39,58 +40,61 @@
             <thead>
                 <tr>
                     <th>#</th>
-                    <th>Domain</th>
-                    <th>Created&nbsp;On</th>
+                    <th>Name</th>
+                    <th>Entry&nbsp;On</th>
                     <th>Status</th>
-                    <th>Server&nbsp;Location</th>
+                    <th>Emergency&nbsp;Contact</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
                 <tr data-status="active">
                     <td>1</td>
-                    <td><a href="#">loremvallis.com</a></td>
+                    <td><a href="#">Craig Matthews</a></td>
                     <td>04/10/2013</td>
-                    <td><span class="label label-success">Active</span></td>
-                    <td>Buenos Aires</td>
-                    <td><a href="#" class="btn btn-sm manage">Manage</a></td>
+                    <td><span class="label label-success">Wait</span></td>
+                    <td>(590)-415-7447</td>
+                    <td><i class="fas fa-trash-alt"></i> <i class="fas fa-pen"></i></td>
                 </tr>
                 <tr data-status="inactive">
                     <td>2</td>
-                    <td><a href="#">quisquamut.net</a></td>
+                    <td><a href="#">Charlene Ortiz</a></td>
                     <td>05/08/2014</td>
-                    <td><span class="label label-warning">Inactive</span></td>
-                    <td>Australia</td>
-                    <td><a href="#" class="btn btn-sm manage">Manage</a></td>
+                    <td><span class="label label-warning">Observation</span></td>
+                    <td>(895)-358-7367</td>
+                    <td><i class="fas fa-trash-alt"></i> <i class="fas fa-pen"></i></td>
                 </tr>
                 <tr data-status="active">
                     <td>3</td>
-                    <td><a href="#">convallissed.com</a></td>
+                    <td><a href="#">Yolanda Burke</a></td>
                     <td>11/05/2015</td>
-                    <td><span class="label label-success">Active</span></td>
-                    <td>United Kingdom</td>
-                    <td><a href="#" class="btn btn-sm manage">Manage</a></td>
+                    <td><span class="label label-success">Wait</span></td>
+                    <td>(895)-358-7367</td>
+                    <td><i class="fas fa-trash-alt"></i> <i class="fas fa-pen"></i></td>
                 </tr>
                 <tr data-status="expired">
                     <td>4</td>
-                    <td><a href="#">phasellusri.org</a></td>
+                    <td><a href="#">Jennifer Barnett</a></td>
                     <td>06/09/2016</td>
-                    <td><span class="label label-danger">Expired</span></td>
-                    <td>Romania</td>
-                    <td><a href="#" class="btn btn-sm manage">Manage</a></td>
+                    <td><span class="label label-danger">Immediate</span></td>
+                    <td>(921)-794-1923</td>
+                    <td><i class="fas fa-trash-alt"></i> <i class="fas fa-pen"></i></td>
                 </tr>
                 <tr data-status="inactive">
                     <td>5</td>
-                    <td><a href="#">facilisleo.com</a></td>
+                    <td><a href="#">Bryan Mrphy</a></td>
                     <td>12/08/2017</td>
-                    <td><span class="label label-warning">Inactive</span></td>
-                    <td>Germany</td>
-                    <td><a href="#" class="btn btn-sm manage">Manage</a></td>
+                    <td><span class="label label-warning">Observation</span></td>
+                    <td>(146)-435-8372</td>
+                    <td><i class="fas fa-trash-alt"></i> <i class="fas fa-pen"></i></td>
                 </tr>
-					<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-					<script src="./src/js/index.js" charset="utf-8"></script>
+
             </tbody>
         </table>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./src/js/index.js" charset="utf-8"></script>
 </body>
 </html>
