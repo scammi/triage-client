@@ -1,21 +1,19 @@
-
+let name;
 $(document).ready(function(){
 
 	$.ajax({
 		url: 'https://randomuser.me/api/',
 		dataType: 'json',
 		success: function(data) {
-			name = data.results[0].name.first + " " + data.results[0].name.second ;
-			$("#name").html(name)
-			console.log(name);
+			name = data.results[0].name.first + " " + data.results[0].name.last;
+			$("#name").html(name);
+			$("#patient_user").html(name);
+
 		}
 	});
 
-	$("#name").click(function(){
-		$("patient_name").html(name);
 
-	})
-	$(".btn-group .btn").click(function(){
+	$(".btn-group .btn").click(function(){1
 		var inputValue = $(this).find("input").val();
 		if(inputValue != 'all'){
 			var target = $('table tr[data-status="' + inputValue + '"]');

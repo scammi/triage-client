@@ -18,9 +18,9 @@ npm start
 ```
 ### TODO
 - [X] Add routing
-- [ ] Implement random user
-- [ ] Graph vitals   
-- [ ] Host
+- [X] Implement random user
+- [X] Graph vitals   
+- [X] Host
 - [ ] Improve code -  DRY (don't repeat your self)
 
 ### Preview
