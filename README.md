@@ -24,7 +24,7 @@ npm start
 - [ ] Improve code -  DRY (don't repeat your self)
 
 ### Preview
-![patientManager](https://i.imgur.com/SRMTSsk.png) 
-![patientPage](https://i.imgur.com/5gAa1Cb.png)
+ 
+https://scammi.github.io/triage-client/
 
 
