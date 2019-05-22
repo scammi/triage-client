@@ -17,7 +17,7 @@ npm install
 npm start
 ```
 ### TODO
-- [ ] Add routing
+- [X] Add routing
 - [ ] Implement random user
 - [ ] Graph vitals   
 - [ ] Host

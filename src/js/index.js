@@ -1,4 +1,20 @@
+
 $(document).ready(function(){
+
+	$.ajax({
+		url: 'https://randomuser.me/api/',
+		dataType: 'json',
+		success: function(data) {
+			name = data.results[0].name.first + " " + data.results[0].name.second ;
+			$("#name").html(name)
+			console.log(name);
+		}
+	});
+
+	$("#name").click(function(){
+		$("patient_name").html(name);
+
+	})
 	$(".btn-group .btn").click(function(){
 		var inputValue = $(this).find("input").val();
 		if(inputValue != 'all'){

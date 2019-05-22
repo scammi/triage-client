@@ -1,1 +1,10 @@
-{  "name": "cabochallenge",  "version": "1.0.0",  "description": "Cabo challenge test",  "main": "./public/views/patient.html ",  "scripts": {    "start": "lite-server"  },  "author": "",  "license": "ISC",  "dependencies": {},  "devDependencies": {    "lite-server": "^2.4.0"  }}
+{  "name": "cabochallenge",
+   "version": "1.0.0",
+   "description": "Cabo challenge test",
+   "main": "./public/views/index.html ",  
+   "scripts": {"start": "lite-server"  },
+   "author": "",
+   "license": "ISC",
+   "dependencies": {},
+   "devDependencies": {    "lite-server": "^2.4.0"  }
+ }
