@@ -1,73 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Patient Manager</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <title>Patient Manager</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
+
 <body>
-<div class="container bootstrap snippet">
+  <div class="container bootstrap snippet">
     <div class="row">
-        <div class="col-sm-10">
-            <h1 id="patient_user"></h1></div>
+      <div class="col-sm-10">
+      </h1></div>
     </div>
     <div class="row">
-        <div class="col-sm-3">
+      <div class="col-sm-3">
+
             <!--left col-->
-
             <ul class="list-group">
-                <li class="list-group-item text-muted">Info</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong>Bed Numbe:</strong></span> 3214</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong>HR:</strong></span>9823</li>
-                <li class="list-group-item text-right"><span class="pull-left"><strong>Service:</strong></span> Trauma</li>
-
+                <li class="list-group-item text-muted">Info <i class=" fas fa-address-card "></i></li>
+                <li class="list-group-item"><span><strong>Name: </strong></span><text id="patient"> </text></li>
+                <li class="list-group-item"><span><strong>Age: </strong></span><text id="age"> </text></li>
+                <li class="list-group-item"><span ><strong>HR:</strong></span> 9823</li>
+                <li class="list-group-item"><span><strong>Service:</strong></span> Trauma</li>
             </ul>
 
             <ul class="list-group">
-                <li class="list-group-item text-muted">EHR <i class="fa fa-dashboard fa-1x"></i></li>
-                <li class="list-group-item text-right"><span class="pull-right"><strong>Lab test</strong></span> 125</li>
-                <li class="list-group-item text-right"><span class="pull-right"><strong>Images</strong></span> 13</li>
-                <li class="list-group-item text-right"><span class="pull-right"><strong>Interconsult </strong></span> 37</li>
-                <li class="list-group-item text-right"><span class="pull-right"><strong>Other</strong></span> 78</li>
+                <li class="list-group-item text-muted">EHR <i class="fas fa-book"></i> </li>
+                <li class="list-group-item text-left"><span><strong>Lab test:</strong></span> 135</li>
+                <li class="list-group-item text-left"><span><strong>Images:</strong></span> 13</li>
+                <li class="list-group-item text-left"><span><strong>Interconsults: </strong></span> 37</li>
+                <li class="list-group-item text-left"><span><strong>Other:</strong></span> 78</li>
             </ul>
-
-
 
         </div>
-        <!--/col-3-->
+
+        <!--Navigation Tab-->
         <div class="col-sm-9">
 
             <ul class="nav nav-tabs" id="myTab">
                 <li class="nav-item"><a class="nav-link active" href="#Vitals" data-toggle="tab">Vitals</a></li>
                 <li class="nav-item"><a class="nav-link" href="#Triage" data-toggle="tab">Triage</a></li>
                 <li class="nav-item"><a class="nav-link" href="#Lab" data-toggle="tab">Lab order</a></li>
-                <li class="nav-item"><a class="nav-link" href="#Lab" data-toggle="tab">Tranfer</a></li>
-
+                <li class="nav-item"><a class="nav-link" href="#Tranfer" data-toggle="tab">Tranfer</a></li>
             </ul>
-            <hr>
+              <hr>
+
+            <!--Vital Tab displays graphs-->
             <div class="tab-content">
+
                 <div class="tab-pane active" id="Vitals">
                     <h3>Hear rate</h3>
                     <canvas id="hr" width="800" height="300"></canvas>
                     <h3>Arterial pressure</h3>
                     <canvas id="bloodPressure" width="800" height="300"></canvas>
-
-
-                    <hr>
-
                 </div>
-                <!--/tab-pane-->
+
+                <!--Triage tab - displays triage form-->
                 <div class="tab-pane" id="Triage">
                   <form>
                     <div class="form" action="##" method="post" id="triageRegistrationForm">
-                      <label for="exampleFormControlTextarea1">Evaluation</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                      <label>Evaluation</label>
+                      <textarea class="form-control" rows="3"></textarea>
                     </div>
                     <div class="form-group">
-                      <label for="formGroupExampleInput">Time and date</label>
-                      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="9/11/2001 8:46 am">
+                      <label>Time and date</label>
+                      <input type="text" class="form-control" placeholder="9/11/2001 8:46 am">
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
@@ -102,7 +101,8 @@
                       </div>
                   </form>
                 </div>
-                <!--/tab-pane-->
+
+                <!--Lab tab - displays lab request form-->
                 <div class="tab-pane" id="Lab">
                     <form class="form" action="##" method="post" id="labRegistrationForm">
                         <div class="form-group">
@@ -124,12 +124,11 @@
                             <div class="col-xs-6">
                                 <label for="Lab Request">
                                     <h5>Details</h5></label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    <textarea class="form-control" rows="3"></textarea>
                             </div>
                         </div>
 
                         <div class="form-group">
-
                             <div class="col-xs-6">
                                 <label for="phone">
                                     <h5>Contact nuber</h5></label>
@@ -137,7 +136,8 @@
                             </div>
                         </div>
                       </div>
-                      <div class="form-check form-check-inline">
+
+                    <div class="form-check form-check-inline">
                       <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="Emergency">
                       <label class="form-check-label" for="inlineCheckbox1">Emergency</label>
                     </div>
@@ -153,13 +153,36 @@
                                 <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
                             </div>
                         </div>
-
                     </form>
-
                 </div>
+
+                <!--Transfer tab - displays transfer form-->
+                <div class="tab-pane" id="Tranfer">
+                  <form>
+                    <div class="form" action="##" method="post" >
+                      <label>Destination</label>
+                      <input class="form-control" rows="3"></input>
+                    </div>
+                    <div class="form" action="##" method="post" id="triageRegistrationForm">
+                      <label>Notes</label>
+                      <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label>Time and date</label>
+                      <input type="text" class="form-control" placeholder="9/11/2001 8:46 am">
+                    </div>
+                      <div class="form-group">
+                          <div class="col-xs-12">
+                              <br>
+                              <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Transfer</button>
+                              <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+                          </div>
+                      </div>
+                  </form>
+                </div>
+
             </div>
         </div>
-
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

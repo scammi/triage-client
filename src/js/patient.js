@@ -1,4 +1,4 @@
-
+//Adds charts to canvas in patient.html
 $(document).ready(function(){
     var heartRateChart = $("#hr");
     var arterialPressure = $("#bloodPressure");
