@@ -10,31 +10,22 @@
 </head>
 
 <body>
-    <div class="table-wrapper">
-        <div class="table-title">
-            <div class="row">
-                <div class="col-sm-6"><h2>Manage <b>Patients</b></h2></div>
-                <div class="col-sm-6">
-                    <div class="btn-group" role="group" >
-                        <button type="button" class="btn btn-primary">
-                            <input type="radio" name="status" value="all" checked="checked"> All
-                        </button>
-                        <button type="button" class="btn btn-success">
-                            <input type="radio" name="status" value="Wait"> Wait
-                        </button>
-                        <button type="button" class="btn btn-warning">
-                            <input type="radio" name="status" value="Observation"> Observation
-                        </button>
-                        <button type="button" class="btn btn-danger">
-                            <input type="radio" name="status" value="Immediate"> Immediate
-                        </button>
-                        <button type="button" class="btn btn-dark">
-                            <input type="radio" name="status" value="Expectant"> Expectant
-                        </button>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#"><h2>Manage <b>Patients</b></h2></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav btn-group ml-auto">
+                        <button id="boton"type="button" class="btn btn-primary" value="All" checkd="checked">All</button>
+                        <button id="boton" type="button" class="btn btn-success" value="Wait">Wait</button>
+                        <button type="button" class="btn btn-warning" value="Observation">Observation</button>
+                        <button type="button" class="btn btn-danger" value="Immediate"> Immediate</button>
+                        <button type="button" class="btn btn-dark"value="Expectant"> Expectant</button>
                     </div>
                 </div>
-            </div>
-        </div>
+        </nav>
         <table class="table table-striped table-hover">
             <thead>
                 <tr>
