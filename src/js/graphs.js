@@ -1,5 +1,12 @@
 //Adds charts to canvas in patient.html
 $(document).ready(function(){
+
+
+    //tempusdominus-bootstrap time picker
+    $("#transferDateTimeicker").datetimepicker();
+    $("#triageDateTimeicker").datetimepicker();
+
+
     var heartRateChart = $("#hr");
     var arterialPressure = $("#bloodPressure");
     var heartRateChart = new Chart(heartRateChart, {
