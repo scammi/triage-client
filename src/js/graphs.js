@@ -46,7 +46,7 @@ $(document).ready(function(){
     data: {
         labels: ['14:00', '18:00', '22:00', '02:00', '6:00', '10:00'],
         datasets: [{
-          	label: 'Sistolic',
+          	label: 'Systolic',
           	fill: false,
             data: [120, 115, 125, 130, 120, 125],
             borderColor: [

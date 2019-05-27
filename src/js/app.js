@@ -11,6 +11,7 @@ $(document).ready(function(){
 		success: function(data) {
 			let name = data.results[0].name.first + " " + data.results[0].name.last;
 			let age = (data.results[0].dob.age).toString();
+			$('#patientTable tr:last').after('<tr data-status="Wait"><td>6</td><td><a href="#">'+ name +'</a></td></tr>');
 			$("#name").html(name);
 			$("#patient").html(name);
 			$("#age").html(age);
@@ -18,6 +19,11 @@ $(document).ready(function(){
 
 		}
 	});
+
+//tempusdominus-bootstrap time picker 
+$("#transferDateTimeicker").datetimepicker();
+$("#triageDateTimeicker").datetimepicker();
+
 
 //Filter patients by triage
 	$("button").click(function(){
