@@ -45,24 +45,24 @@
                 <li class="nav-item"><a class="nav-link active" href="#Vitals" data-toggle="tab">Vitals</a></li>
                 <li class="nav-item"><a class="nav-link" href="#Triage" data-toggle="tab">Triage</a></li>
                 <li class="nav-item"><a class="nav-link" href="#Lab" data-toggle="tab">Lab order</a></li>
-                <li class="nav-item"><a class="nav-link" href="#Tranfer" data-toggle="tab">Tranfer</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Transfer" data-toggle="tab">Transfer</a></li>
             </ul>
 
 
-              <hr>
+            <hr>
 
             <!--Vital Tab displays graphs-->
             <div class="tab-content">
 
                 <div class="tab-pane active" id="Vitals">
-                    <h3>Hear rate</h3>
+                    <h3>Heart rate</h3>
                     <canvas id="hr" width="800" height="300"></canvas>
                     <h3>Blood Pressure</h3>
                     <canvas id="bloodPressure" width="800" height="300"></canvas>
                 </div>
 
                 <!--Triage tab - displays triage form-->
-                <div class="tab-pane" id="Triage">
+              <div class="tab-pane" id="Triage">
                   <form>
                     <div class="form-group" action="##" method="post" id="triageRegistrationForm">
                       <label>Evaluation</label>
@@ -81,7 +81,7 @@
                         <label class="form-check-label" for="exampleRadios1">
                           Wait
                         </label>
-                      </div>
+                    </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
                         <label class="form-check-label" for="exampleRadios2">
@@ -113,33 +113,33 @@
                 <!--Lab tab - displays lab request form-->
                 <div class="tab-pane" id="Lab">
                     <form class="form-group" action="##" method="post" id="labRegistrationForm">
-                        <div class="form-group">
-                            <div class="col-xs-6">
-                                <label for="Lab request"> Lab Request</label>
-                                    <select class="form-control form-control-sm">
-                                        <option>Complete Blood Count</option>
-                                        <option>Basic Metabolic Panel</option>
-                                        <option>Comprehensive Metabolic Panel</option>
-                                        <option>Prothrombin Time</option>
-                                        <option>Lipid Panel</option>
-                                        <option>Liver Panel</option>
-                                        <option>Thyroid Stimulating Hormone</option>
-                                    </select>
-                            </div>
+                      <div class="form-group">
+                          <div class="col-xs-6">
+                              <label for="Lab request"> Lab Request</label>
+                                  <select class="form-control form-control-sm">
+                                      <option>Complete Blood Count</option>
+                                      <option>Basic Metabolic Panel</option>
+                                      <option>Comprehensive Metabolic Panel</option>
+                                      <option>Prothrombin Time</option>
+                                      <option>Lipid Panel</option>
+                                      <option>Liver Panel</option>
+                                      <option>Thyroid Stimulating Hormone</option>
+                                  </select>
                           </div>
+                      </div>
 
-                        <div class="form-group">
-                            <div class="col-xs-6">
-                                <label for="Lab Request">Details</label>
-                                <textarea class="form-control" rows="3"></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-xs-6">
-                                <label for="phone">Contact Nuber</label>
-                                <input type="text" class="form-control" name="phone" id="phone" title="enter your phone number if any.">
-                            </div>
-                        </div>
+                      <div class="form-group">
+                          <div class="col-xs-6">
+                              <label for="Lab Request">Details</label>
+                              <textarea class="form-control" rows="3"></textarea>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <div class="col-xs-6">
+                              <label for="phone">Contact Nuber</label>
+                              <input type="text" class="form-control" name="phone" id="phone" title="enter your phone number if any.">
+                          </div>
+                      </div>
 
 
                       <div class="form-check-inline">
@@ -153,19 +153,19 @@
                         </label>
                       </div>
 
-                        <div class="form-group">
+                      <div class="form-group">
                             <div class="col-xs-12">
                                 <br>
                                 <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Request</button>
                                 <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
                             </div>
-                        </div>
+                      </div>
                     </form>
                 </div>
 
 
                 <!--Transfer tab - displays transfer form-->
-                <div class="tab-pane" id="Tranfer">
+                <div class="tab-pane" id="Transfer">
                   <form>
                     <div class="form-group" action="##" method="post" >
                       <label>Destination</label>
@@ -192,11 +192,9 @@
                       </div>
                   </form>
                 </div>
-
             </div>
-        </div>
-    </div>
-</div>
+        </body>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"> </script>
