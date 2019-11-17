@@ -24,7 +24,6 @@ npm start
 - [ ] Improve code -  DRY (don't repeat your self)
 
 ### Preview
- 
-https://scammi.github.io/triage-client/
-
+![](https://i.imgur.com/a4M77Nk.png)
+![](https://i.imgur.com/jj0b5cm.png)
 
